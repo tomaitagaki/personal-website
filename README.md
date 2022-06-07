@@ -1,4 +1,4 @@
 # Toma's Personal Website
 
-tomaitagaki.hithub.io/personal-website/
-tomaitagaki.com
+[link1](tomaitagaki.hithub.io/personal-website/)
+[future](tomaitagaki.com)
