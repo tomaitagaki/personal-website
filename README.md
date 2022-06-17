@@ -1,4 +1,3 @@
 # Toma's Personal Website
 
-[link1](https://tomaitagaki.github.io/personal-website/)
-[future](https://www.tomaitagaki.com)
+Toma's personal website: [Here](https://www.tomaitagaki.com)
