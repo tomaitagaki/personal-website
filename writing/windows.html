@@ -1,0 +1,241 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Information Space</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="type-home">
+    <header>
+        <div class="overlay">
+            <div class="home">
+                <a href="/">Toma Itagaki</a>
+            </div>
+
+            <nav>
+                <a href="index.html">Writing</a>
+                <!-- <a href="/projects/">Projects</a> -->
+                <!-- <a href="/research/">Research</a> -->
+                <a class="desktop" href="https://twitter.com/tomaitagaki">Tweets</a>
+            </nav>
+        </div>
+    </header>
+
+    <main aria-role="main">
+        <div class="overlay">
+            <h1 id="title">Computer Windows as Attention Streams</h1>
+            <h2 id="subtitle">2022-0711</h2>
+
+            <p>Modern digital systems present extreme fluidity between contexts. <b>Context, in this case, describes
+                    task-specific environments</b>; in the physical realm, this could correspond to the tasks we do in
+                each of
+                the rooms in our house: working in the office, cooking in the kitchen, and sleeping in the bedroom. Much
+                easier to segregate in the physical realm with space and insight from centuries of building houses. But
+                in the digital realm, our laptops, phones, and tablets have become the one stop shop for most of our
+                environments ranging from writing code for work to watching Netflix for leisure. Modern challenges call
+                for modern solutions (rather, digital solutions call for digital solutions or fight software with
+                software!)
+            </p>
+
+            <p>Operating Systems (OS) have tried to implement digital walls in the form of "virtual desktops" to help
+                organize our contexts, but I personally have found these attempts to be miserable at best. I have been a
+                heavy advocate for Notion, and when setting up virtual desktops, Notion is unable to be opened more than
+                once, meaning that I cannot use separate Notion windows in each desktop. Of course, this is a small
+                nuisance, and there is no reason why I can't just move Notion over when I context-switch or open Notion
+                in a
+                web browser. cmd+tab also cycles through applications regardless of which desktop they reside in.
+                There's
+                more. But it leads me to the point that <b>the modern "desktop" experience is still very unintentional
+                    when it
+                    comes to being optimized as a multi-environment machine for our seemingly complex modern needs.</b>
+            </p>
+
+            <h2 id="subtitle"><b>The Desktop Experience Sucks</b></h2>
+
+            <p>As a (novice) Mac user, I rely heavily on the three finger swipe. Seeing all the windows and quickly
+                picking the one I need is a non-negotiable at this point. Especially considering that cmd+tab cycles
+                through applications rather than windows (cmd+` for within app window cycling), the three finger swipe
+                is the only way I can stay sane while switching between windows. However, as I dive into more topics,
+                research, and apis, I have a steadily increasing amount of browser tabs. With more tabs, comes more
+                windows; each window holding similar types of content. I've also resorted to having personal tabs in a
+                secondary browser in Chrome, given the disappointing cmd+tab hotkey. But as topics and tabs increase,
+                the number of windows has increased, and the three window swipe starts to look a lot like the Mac
+                desktop with a gazillion screenshot icons that you can barely see. I've definitely noticed that I have
+                to consciously sift through my windows instead of having my hands work their seasoned unconscious magic.
+            </p>
+
+            <p><b><i>This has lead me to consider what I would prefer instead. What an ideal, yet feasible desktop
+                        experience would consist of.</i></b></p>
+
+            <h2 id="subtitle"><b>Reducing Windows with Intention</b></h2>
+
+            <p><i>In theory</i>, virtual desktops should work; <b>we should be creating intentional siloes between
+                    different
+                    context environments.</b> <i>So, what should be in each environment? In other words, what windows
+                    should exist
+                    within each environment?</i></p>
+
+            <p>
+                Consider the case in which you are programming. You are likely typing away (or cmd+v-ing) on VSCode or
+                another IDE with a separate browser window open where you can paste your error message into Google. You
+                might also have Slack open to complain to colleagues about running into so many errors, and Spotify to
+                play
+                some LoFi to keep a state of psychological flow. In this case, four windows would suffice: <i>one where
+                    you are
+                    actively outputting into (VSCode), one where you are getting input from (browser with Stack
+                    Overflow), one
+                    where you are communicating (Slack), and one where you are receiving audio or background input from
+                    (Spotify).</i> <b>Four windows for four "streams,"</b> and no distractions.
+            </p>
+
+            <p>
+                Let's try another case in which you are a student taking notes from a Zoom recording. You likely have
+                one window open for playing back the recording, and another for word or google docs to regurgi-type the
+                professor's words at 2x speed. These windows could be in split-view or on separate monitors, but there
+                is no case in which these two "streams" should live within the same window. You could also hold the
+                superhuman ability to listen to music from YouTube during the lecture. Or you are texting a friend about
+                how software engineering pays too well to be paying attention to neuroscience lectures on Discord. In
+                this case, a focused student likely only needs two windows for playback and note-taking. But when the
+                lecture is over and you start working on the related assignment, you may want to quickly turn on some
+                background audio. The playback window can be transformed into the problem set PDF and the note taking
+                output window into a blank answer sheet. Even in this case where the environment calls for two separate
+                tasks, the maximum number of streams I can think of is four.
+            </p>
+
+            <p>
+                Now I am not suggesting that everyone settles with four windows. <b>What I do believe is that windows
+                    should represent these "streams," rather than the applications.</b> The arbitrary choice behind
+                having
+                windows for each application is a trivial limitation of software development.
+            </p>
+
+            <h2 id="subtitle"><b>Windows as Attention Streams</b></h2>
+
+            <p>
+                Going back to the four streams I chose of output, input, communication, and background audio, these
+                represent what I call <b>digital "attention streams."</b>
+            </p>
+
+            <ul>
+                <li>
+                    <b><i>Output</i></b> corresponds to the interfacing we are doing with the computer which could range
+                    from
+                    scrolling to typing to gaming.
+                </li>
+                <li>
+                    <b><i>Input</i></b> captures where our eyes (and sometimes our ears) are attentive to. This stream
+                    only
+                    deals with information we consciously process.
+                </li>
+                <b><i>Background audio</i></b> is likely the most self-explanatory and consistent with physiological
+                attention
+                streams. This is the information that travels through our auditory system, but is mostly not processed.
+                <li>
+                    <b><i>Communication</i></b> is an interesting one, considering that it is likely not necessary most
+                    of the time, and <i>that it represents a neocortical attentional stream:</i> the direct and
+                    instantaneous
+                    communication that the internet has made possible. Although this stream does not correspond to any
+                    of our five senses, it does represent a shift towards the adoption of digital capabilities within
+                    our everyday processing.
+                </li>
+            </ul>
+
+            <p>
+                Although somewhat arbitrary, <b>my choice of these four relate to my ability to concurrently attend to
+                    each
+                    stream.</b> Rarely will I listen to music on YouTube at the same time as my Spotify radio; my
+                auditory
+                system is already saturated with one background audio stream. Similarly, it is rare to think of a case
+                where I need any two of Slack, Discord, Signal, and Gmail open in the same environment, and rather find
+                the extra window(s) a nuisance when navigating windows. A caveat for the input and output is that use
+                cases can be complex where multiple windows of each or custom visualization could be necessary.
+            </p>
+
+            <p>
+                Regardless, this system of <i>windows as attentional streams</i> is much more intentional in how to set
+                up our
+                desktop experience.
+            </p>
+
+            <h2 id="subtitle"><b>The Counter-Arguments: You Could Just Open and Close Windows...</b></h2>
+
+            <p>To anyone who suggests I close and open windows, F*CK YOU. You probably eat the cheapest bread on sale
+                from the supermarket; and the problem is that most people would simply pick the cheapest bread
+                available. The default sucks, and if we are spending significant time on our desktops, it should deliver
+                the best experience.
+            </p>
+
+            <p>
+                Consider how mentally taxing it is to see merge conflicts when you git push. Or when you have a million
+                <i>actually</i> relevant tabs open that you need to organize into Mendeley/Zotero or bookmarks. Digital
+                cleaning sucks, and sometimes you have to leave things open in order to switch quickly; this is another
+                <b>prioritization of attention as a currency</b> when context switching.
+            </p>
+
+            <h2 id="subtitle"><b>Attention as a Currency: We Can Track Our Spending Better</b></h2>
+
+            <p>Another benefit to organizing windows into attentional streams, is to make tracking our digital
+                experience easier. The iOS "Screen Time" statistic is interesting at best, since we rarely use a single
+                app at a time. Furthermore, time spent on our browser can literally be anything. With better tracking by
+                streams, rather than by applications, the data can be game-changing for context logging and tracking:
+                the first-step in creating personalized insights into lifestyle management. </p>
+
+            <p>
+                <a href="https://amie.so/">Amie</a> is a calendar app that has realized one aspect of this through its
+                Spotify integration. It logs what you were listening to as a timeseries of songs inside of the calendar
+                in a side-bar view. Similar to this feature, if we have a dedicated window for our audio stream, we can
+                find correlational insights between audio and productivity, not just from Spotify (think insights like
+                when playing LoFi, I produce 15% more productive keystrokes than with no music).
+            </p>
+
+            <p>
+                With four streams (or however many streams you use) we can see when and what we are attentive to in each
+                stream; in other words, capturing the time-series of each stream. <b>We can further log this in a way
+                    that
+                    we can combine physiological and extraneous signals to train personalized algorithms to gain insight
+                    into optimizing our workflows from a physiological level as well.</b>
+            </p>
+
+            <h2 id="subtitle"><b>The Browser Company's Arc</b></h2>
+
+            <p>These frustrations have prompted me to explore the endless world of productivity apps and each unique
+                solution to the digital mess that we indulge in everyday. </p>
+
+            <p>
+                Most recently, I was given access to Arc, <a href="https://thebrowser.company/">The Browser
+                    Company's</a> currently private browser. A nifty application with extremely pleasant and intentional
+                aesthetics along with various customization options to help organize browsing the internet. But <b>the
+                    feature I was most impressed with was the ability to organize contexts into what they call
+                    "spaces."</b>
+                Neatly packed in the bottom of the navigation bar, you are able to create and switch between spaces
+                which hold its own bookmarks (pinned tabs), open tabs, and notes/easels.
+            </p>
+
+            <p>
+                I had previously used separate Brave windows to hold different contexts such as work, personal, school
+                club, my writing, etc. which gets messy very quick. On MacOS, I have to cmd+tab to the Brave application
+                and further cycle through multiple Brave windows with cmd+` to find the window of interest. <b>With
+                    Arc's
+                    new organization, I came to realize that I rarely use multiple browser tabs (not some of the common
+                    web
+                    apps like gmail or google docs) at the same time.</b> Arc currently serves as my input window, and
+                even more
+                pleasant is the ability to switch the input window's context by swapping spaces.
+            </p>
+
+            <h2 id="subtitle"><b>In Conclusion: Intention and Optimization</b></h2>
+
+            <p>My recent expedition on the productivity application landscape made me realize how much of the
+                conversation around productivity apps surrounds the "best app," when such an app doesn't exist. 
+                It's likely that even if all productivity software development halted at this moment, no one would halt
+                their work: there are so many tools already. </p>
+
+            <p>
+                The next steps is to take a step back and consider how these tools all fit into our multi-tool
+                workflows. How do new tools like Notion, Arc, Cron, and Endel fit into my workflow? <i>And how can I
+                optimize it?</i>
+            </p>
+
+            <pre></pre>
+
+        </div>
+    </main>
