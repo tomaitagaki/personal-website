@@ -147,6 +147,14 @@ main a:hover {
     }
 }
 
+@media screen and (max-width: 600px) { 
+    .split img { display: none; }      
+
+    .split p {
+        width: 100%;
+    }
+}
+
 /*Header*/
 header a {
     text-decoration: none;
@@ -196,9 +204,4 @@ nav a.fade {
 
 .type-home h2 {
     font-size: 1em;
-}
-
-img {
-    width: 100%;
-    height: auto;
 }
