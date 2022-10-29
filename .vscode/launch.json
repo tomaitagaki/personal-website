@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "/Users/tomaitagaki/Documents/personal-website/research/index.html"
+            "file": "/Users/tomaitagaki/Documents/personal-website/index.html"
         }
     ]
 }
