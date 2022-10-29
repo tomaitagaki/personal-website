@@ -33,13 +33,13 @@ body {
 
 .split p {
     float: left;
-    width: 70%;
+    width: 65%;
 }
 
 .split img {
     float: right;
     width: 30%;
-    top : 50%;
+    vertical-align: middle;
     overflow: hidden;
 }
 
