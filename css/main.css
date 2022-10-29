@@ -31,6 +31,17 @@ body {
     min-height: 100vh;
 }
 
+.split {
+    float: left;
+    width: 70%;
+}
+
+.split img {
+    float: right;
+    width: 30%;
+    overflow: hidden;
+}
+
 header {
     flex-grow: 0;
     flex-shrink: 0;
