@@ -37,8 +37,11 @@ body {
 }
 
 .split img {
-    vertical-align: middle;
-    float: right;
+    /* vertical-align: middle; */
+    display: flex;
+    justify-content: center;
+    /* float: right;
+    top: 50%; */
     width: 30%;
     overflow: hidden;
 }
