@@ -31,6 +31,27 @@ body {
     min-height: 100vh;
 }
 
+.split p {
+    float: left;
+    width: 65%;
+}
+
+.split img {
+    /* vertical-align: middle; */
+    display: flex;
+    justify-content: center;
+    /* float: right;
+    top: 50%; */
+    width: 30%;
+    overflow: hidden;
+}
+
+.overlay:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 header {
     flex-grow: 0;
     flex-shrink: 0;
@@ -126,6 +147,14 @@ main a:hover {
 
     .mobile {
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    .split img { display: none; }      
+
+    .split p {
+        width: 100%;
     }
 }
 
