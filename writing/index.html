@@ -1,51 +1,17 @@
+---
+title: "Writing"
+description: "Writing about productivity, wearables, neurotech, and the intersection of all."
+---
 
-<!DOCTYPE html>
-<html lang="en">
+<div class="overlay">
+    <h1>Writing</h1>
+    <p>
+        Writing about productivity, wearables, neurotech, and the intersection of all.
+    </p>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="css/main.css" />
-
-    <title>Writings</title>
-    <link rel="canonical" href="https://tomaitagaki.com/posts/" />
-
-</head>
-
-<body class="type-home">
-    <header>
-        <header>
-            <div class="overlay">
-                <div class="home">
-                    <a href="/">Toma Itagaki</a>
-                </div>
-                <nav>  
-                    <a href="index.html">Writing</a>
-                    <!-- <a href="/projects/">Projects</a> -->
-                    <a href="/research/index.html">Research</a>
-                    <a class="desktop" href="https://twitter.com/tomaitagaki">Tweets</a>
-                </nav>
-            </div>
-        </header>
-    </header>
-
-    <main aria-role="main">
-        <div class="overlay">
-            <h1>Writing</h1>
-            <p>
-                Writing about productivty, wearables, neurotech, and the intersection of all.
-
-            </p>
-
-            <p class="article_link">
-                <a href="info-space.html">2022-0617: Personal Information Space</a>
-            </p>
-            <p class="article_link">
-                <a href="windows.html">2022-0711: Computer Windows as Attention Streams</a>
-            </p>
-        </div>
-    </main>
-	
-</body>
-
-</html>
+    {% for post in site.posts %}
+        <p class="article_link">
+            <a href="{{ post.url | relative_url }}">{{ post.date | date: "%Y-%m%d" }}: {{ post.title }}</a>
+        </p>
+    {% endfor %}
+</div>

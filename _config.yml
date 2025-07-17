@@ -1,0 +1,56 @@
+# Site settings
+title: "Toma Itagaki"
+description: "Personal website of Toma Itagaki - PhD student at Columbia University researching physical and digital systems"
+url: "https://tomaitagaki.com"
+baseurl: ""
+
+# Author
+author:
+  name: "Toma Itagaki"
+  email: "tomaitagaki@gmail.com"
+  twitter: "tomaitagaki"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /writing/:title/
+
+# Jekyll plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# GitHub Pages compatibility
+safe: true
+source: .
+destination: ./_site
+keep_files: [".git", ".svn"]
+plugins_dir: _plugins
+layouts_dir: _layouts
+data_dir: _data
+includes_dir: _includes
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /writing/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default" 
