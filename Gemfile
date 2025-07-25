@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+# Specify Ruby version for consistency
+ruby "3.1.0"
+
 # GitHub Pages compatibility
 gem "github-pages", group: :jekyll_plugins
 
@@ -8,6 +11,9 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-sitemap"
 end
+
+# Netlify compatibility
+gem "webrick", "~> 1.7" if RUBY_VERSION >= "3.0.0"
 
 # Windows and JRuby compatibility
 platforms :mingw, :x64_mingw, :mswin, :jruby do
