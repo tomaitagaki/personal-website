@@ -1,235 +1,167 @@
-# Personal Website - Jekyll Version
+# 🚀 DIRT SIMPLE Jekyll + GitHub Pages + Custom Domain Setup
 
-This personal website has been converted from static HTML to Jekyll while maintaining the exact same design and functionality. You can now write posts in Markdown and enjoy automated site generation.
+> **Goal**: Host your Jekyll site on GitHub Pages using `tomaitagaki.com` domain from GoDaddy
 
-## 🔄 Migration Summary
+This guide will get your site live in **under 10 minutes**. No complicated steps, just copy-paste and follow along.
 
-### What Changed:
-- ✅ **Jekyll Configuration**: Added `_config.yml` for site settings and GitHub Pages compatibility
-- ✅ **Layout Templates**: Created reusable templates in `_layouts/` to eliminate code duplication
-- ✅ **Markdown Posts**: Converted HTML posts to Markdown files in `_posts/`
-- ✅ **Automated Post Listing**: Writing index now automatically shows all posts
-- ✅ **GitHub Pages Ready**: Site builds automatically when pushed to GitHub
+## 📋 Quick Setup Checklist
 
-### What Stayed the Same:
-- ✅ **Exact Same Design**: All CSS and styling preserved
-- ✅ **Same URLs**: Post URLs and navigation unchanged  
-- ✅ **Same Functionality**: All features work identically
-- ✅ **Same Hosting**: Still works with GitHub Pages
+- [ ] 1. Push to GitHub (2 minutes)
+- [ ] 2. Enable GitHub Pages (1 minute)  
+- [ ] 3. Add CNAME file (30 seconds)
+- [ ] 4. Configure GoDaddy DNS (5 minutes)
+- [ ] 5. Wait for propagation (up to 24 hours)
 
-## 🚀 Quick Start
+## 🔥 Step 1: Push Your Site to GitHub
 
-### Prerequisites
-- Ruby (comes with macOS)
-- Bundler gem
-
-### Local Development
 ```bash
-# Install dependencies (first time only)
-bundle install
-
-# Start development server
-bundle exec jekyll serve
-
-# View your site at:
-# http://localhost:4000
+# If you haven't already, create a GitHub repo and push your code
+git add .
+git commit -m "Initial Jekyll site"
+git push origin main
 ```
 
-### Stop Server
+## ⚙️ Step 2: Enable GitHub Pages
+
+1. Go to your GitHub repository
+2. Click **Settings** tab
+3. Scroll down to **Pages** (left sidebar)
+4. Under **Source**, select **Deploy from a branch**
+5. Choose **main** branch and **/ (root)** folder
+6. Click **Save**
+
+## 📝 Step 3: Add CNAME File
+
+Create a CNAME file in your repository root:
+
 ```bash
-# Press Ctrl+C in terminal
-```
-
-## ✍️ Writing New Posts
-
-### 1. Create New Post File
-Create a new file in `_posts/` with this naming format:
-```
-_posts/YYYY-MM-DD-post-title.md
-```
-
-Example: `_posts/2024-12-25-my-new-post.md`
-
-### 2. Add Front Matter
-Start your post with Jekyll front matter:
-```markdown
----
-title: "Your Post Title"
-date: 2024-12-25
-description: "Brief description for SEO and social sharing"
----
-
-Your markdown content goes here...
-```
-
-### 3. Write in Markdown
-Use standard Markdown syntax:
-```markdown
-## Headings
-**Bold text**
-*Italic text*
-[Links](https://example.com)
-- Bullet points
-1. Numbered lists
-```
-
-### 4. Preview and Publish
-- **Preview locally**: Save the file and refresh http://localhost:4000
-- **Publish**: Commit and push to GitHub
-
-## 📁 Project Structure
-
-```
-personal-website/
-├── _config.yml                 # Jekyll configuration
-├── _layouts/
-│   ├── default.html            # Base template with header/navigation
-│   └── post.html               # Template for writing posts
-├── _posts/
-│   ├── 2022-06-17-personal-information-space.md
-│   └── 2022-07-11-computer-windows-as-attention-streams.md
-├── css/
-│   └── main.css                # Your existing styles (unchanged)
-├── public/                     # Images and assets (unchanged)
-├── writing/
-│   └── index.html              # Auto-generates post list
-├── research/
-│   └── index.html              # Research page (now uses Jekyll layout)
-├── index.html                  # Homepage (now uses Jekyll layout)
-├── Gemfile                     # Ruby dependencies
-└── README.md                   # This file
-```
-
-## 🌐 Deployment
-
-### GitHub Pages (Automatic)
-1. **Commit your changes:**
-   ```bash
-   git add .
-   git commit -m "Add new post"
-   git push origin main
-   ```
-
-2. **GitHub automatically builds and deploys your site**
-   - No additional configuration needed
-   - Site updates within a few minutes
-
-### Custom Domain (Optional)
-If you have a custom domain, add a `CNAME` file:
-```bash
-echo "yourdomain.com" > CNAME
+echo "tomaitagaki.com" > CNAME
 git add CNAME
 git commit -m "Add custom domain"
 git push origin main
 ```
 
-## 🎨 Customization
+## 🌐 Step 4: Configure GoDaddy DNS
 
-### Updating Site Information
-Edit `_config.yml` to change:
-- Site title and description
-- Author information  
-- URL settings
+### In GoDaddy DNS Management:
 
-### Modifying Design
-- **Styles**: Edit `css/main.css` (your existing CSS)
-- **Layout**: Modify files in `_layouts/`
-- **Navigation**: Update header in `_layouts/default.html`
+1. **Login to GoDaddy** → Go to your domains → Manage `tomaitagaki.com`
+2. **DNS Management** → Manage DNS Records
 
-### Adding New Pages
-Create new `.html` or `.md` files in the root directory with Jekyll front matter:
-```markdown
----
-title: "New Page"
-description: "Page description"
----
+### Add these DNS records:
 
-Page content here...
-```
+| Type | Name | Value | TTL |
+|------|------|-------|-----|
+| A | @ | `185.199.108.153` | 1 Hour |
+| A | @ | `185.199.109.153` | 1 Hour |
+| A | @ | `185.199.110.153` | 1 Hour |
+| A | @ | `185.199.111.153` | 1 Hour |
+| CNAME | www | `yourusername.github.io` | 1 Hour |
 
-## 🔧 Troubleshooting
+**Replace `yourusername` with your actual GitHub username**
 
-### Common Issues
+### Delete any existing records:
+- Delete existing A records pointing to other IPs
+- Delete existing CNAME records for @ or www
 
-**1. "Front matter must start at the beginning of the file"**
-- Ensure no empty lines or spaces before the `---`
-- Front matter must be the very first thing in the file
+## ✅ Step 5: Verify Setup
 
-**2. "Command not found: bundle"**
+1. **Check GitHub Pages**: Go to Settings → Pages and verify custom domain shows `tomaitagaki.com`
+2. **Wait for DNS**: Can take up to 24 hours (usually much faster)
+3. **Test your site**: Visit `https://tomaitagaki.com`
+
+## 🔄 Daily Workflow (Writing Posts)
+
+### Write a new post:
 ```bash
-gem install bundler
+# 1. Create new post file
+touch _posts/$(date +%Y-%m-%d)-my-new-post.md
+
+# 2. Add front matter and content:
+cat > _posts/$(date +%Y-%m-%d)-my-new-post.md << 'EOF'
+---
+title: "My New Post Title"
+date: 2024-12-25
+description: "Brief description"
+---
+
+Write your content here in **Markdown**...
+EOF
+
+# 3. Preview locally (optional)
+bundle exec jekyll serve
+# Visit: http://localhost:4000
+
+# 4. Publish to live site
+git add .
+git commit -m "Add new post"
+git push origin main
 ```
 
-**3. "Permission denied" when installing gems**
+Your site updates automatically within 2-3 minutes! 🎉
+
+## 🆘 Troubleshooting
+
+### "Domain not working after 24 hours"
 ```bash
-bundle install --path vendor/bundle
+# Check DNS propagation
+nslookup tomaitagaki.com
+dig tomaitagaki.com A
 ```
+Should show the GitHub Pages IPs listed above.
 
-**4. Posts not showing up**
-- Check filename format: `YYYY-MM-DD-title.md`
-- Ensure date in front matter matches filename
-- Verify front matter syntax is correct
+### "Site shows 404"
+- Make sure CNAME file contains exactly: `tomaitagaki.com`
+- Check GitHub Pages settings show your custom domain
+- Verify DNS records are exactly as listed above
 
-**5. Site not updating on GitHub Pages**
+### "HTTPS not working"
+- Wait 24-48 hours after DNS setup
+- GitHub automatically provisions SSL certificates
+- Check GitHub Pages settings for SSL status
+
+### "Site not updating"
 - Check GitHub Actions tab for build errors
-- Ensure `_config.yml` is properly formatted
+- Ensure `_config.yml` has correct `url: "https://tomaitagaki.com"`
 
-### Development Tips
+## 📁 Important Files
 
-**Hot Reloading**: Jekyll automatically rebuilds when you save files (except `_config.yml`)
-
-**Draft Posts**: Add `published: false` to front matter to hide posts
-
-**Future Posts**: Posts with future dates won't show until that date
-
-## 📝 Writing Tips
-
-### Markdown Cheat Sheet
-```markdown
-# H1 Heading
-## H2 Heading
-### H3 Heading
-
-**Bold** and *italic*
-
-[Link text](https://example.com)
-
-![Image alt text](/path/to/image.png)
-
-> Blockquote
-
-`inline code`
-
-```code block```
-
-- Unordered list
-1. Ordered list
+```
+your-site/
+├── CNAME                    # Contains: tomaitagaki.com
+├── _config.yml             # url: "https://tomaitagaki.com"  
+├── _posts/                 # Your blog posts
+│   └── YYYY-MM-DD-title.md
+└── index.html              # Homepage
 ```
 
-### SEO Best Practices
-- Always include `title` and `description` in front matter
-- Use descriptive filenames
-- Include relevant keywords naturally in content
-- Keep descriptions under 160 characters
+## 🎯 That's It!
 
-## 🆘 Getting Help
+Your Jekyll site is now:
+- ✅ Hosted on GitHub Pages (free!)
+- ✅ Using your custom domain `tomaitagaki.com`
+- ✅ Automatically building when you push changes
+- ✅ SSL-enabled (https://)
+- ✅ Lightning fast
 
-- **Jekyll Documentation**: https://jekyllrb.com/docs/
-- **Markdown Guide**: https://www.markdownguide.org/
-- **GitHub Pages**: https://docs.github.com/en/pages
+## 📱 Quick Commands Reference
 
-## 🎉 Benefits of This Setup
+```bash
+# Write new post
+./new-post.sh "Post Title"
 
-✅ **Write in Markdown**: Clean, focused writing experience  
-✅ **No Code Duplication**: Templates handle repeated HTML  
-✅ **Automatic Post Listing**: New posts appear automatically  
-✅ **SEO Ready**: Better meta tags and structure  
-✅ **Version Control**: Track changes to your content  
-✅ **Fast Builds**: GitHub handles deployment automatically  
-✅ **Future-Proof**: Easy to add features and modify
+# Preview locally  
+bundle exec jekyll serve
+
+# Publish changes
+git add . && git commit -m "Update site" && git push
+
+# Check site status
+curl -I https://tomaitagaki.com
+```
 
 ---
 
-**Happy writing!** 🚀
+**🎉 Congratulations!** Your site is live at https://tomaitagaki.com
 
-Your personal website now combines the simplicity of Markdown with the power of Jekyll, while keeping your beautiful custom design intact.
+Need help? The setup is designed to be bulletproof, but if something breaks, check the troubleshooting section above.
