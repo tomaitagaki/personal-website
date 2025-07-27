@@ -3,7 +3,7 @@
   command = "bundle exec jekyll build"
 
 [build.environment]
-  RUBY_VERSION = "2.7.2"
+  RUBY_VERSION = "3.0.6"
   NODE_VERSION = "16"
 
 [[plugins]]
