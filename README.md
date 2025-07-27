@@ -48,7 +48,10 @@ This personal website has been converted from static HTML to Jekyll and deploys 
 
 ### Create a new post:
 ```bash
-# 1. Create new post file with proper naming
+# 1. Use the included script (recommended)
+./new-post.sh "Your Post Title"
+
+# 2. Or create manually
 touch _posts/$(date +%Y-%m-%d)-my-new-post.md
 ```
 
@@ -105,6 +108,7 @@ personal-website/
 ├── research/
 │   └── index.html           # Research page
 ├── index.html               # Homepage
+├── new-post.sh              # Utility script for creating posts
 ├── Gemfile                  # Ruby dependencies
 └── README.md                # This file
 ```
@@ -134,6 +138,20 @@ Should point to your Netlify site URL.
 - Usually works within 30 minutes of DNS setup
 - Check Domain settings in Netlify for SSL status
 
+## 🔒 Security & Privacy
+
+This repository is **public** and has been cleaned to ensure:
+- ✅ No sensitive information (API keys, passwords, tokens)
+- ✅ No build artifacts or temporary files
+- ✅ No personal system files (.DS_Store, editor configs)
+- ✅ Comprehensive .gitignore for future protection
+
+### Contributing Guidelines
+- Never commit sensitive information
+- Use environment variables for any secrets
+- Keep personal information in content only (not code)
+- Review changes before pushing to public repo
+
 ## 🎯 Benefits of This Setup
 
 ✅ **Write in Markdown**: Clean, focused writing experience  
@@ -148,7 +166,7 @@ Should point to your Netlify site URL.
 
 ```bash
 # Write new post
-touch _posts/$(date +%Y-%m-%d)-post-title.md
+./new-post.sh "Post Title"
 
 # Preview locally (optional)
 bundle exec jekyll serve
