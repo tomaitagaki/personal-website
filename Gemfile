@@ -1,29 +1,20 @@
 source "https://rubygems.org"
 
-# Specify Ruby version for consistency
-ruby "3.1.0"
+# Jekyll and plugins
+gem "jekyll", "~> 4.3"
+gem "jekyll-feed", "~> 0.12"
+gem "jekyll-sitemap"
+gem "webrick", "~> 1.7"
 
-# GitHub Pages compatibility
-gem "github-pages", group: :jekyll_plugins
+# For faster builds
+gem "kramdown-parser-gfm"
 
-# Jekyll plugins
-group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-sitemap"
+group :development do
+  gem "listen", "~> 3.0"
 end
-
-# Netlify compatibility
-gem "webrick", "~> 1.7" if RUBY_VERSION >= "3.0.0"
 
 # Windows and JRuby compatibility
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
-end
-
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
-
-# Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
-# do not have a Java counterpart.
-gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby] 
+end 

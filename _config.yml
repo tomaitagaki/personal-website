@@ -20,22 +20,14 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# GitHub Pages compatibility
-safe: true
-source: .
-destination: ./_site
-keep_files: [".git", ".svn"]
-plugins_dir: _plugins
-layouts_dir: _layouts
-data_dir: _data
-includes_dir: _includes
-
 # Exclude from processing
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
   - vendor/
+  - netlify.toml
+  - node_modules/
 
 # Collections
 collections:

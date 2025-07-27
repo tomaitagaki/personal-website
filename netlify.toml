@@ -1,19 +1,32 @@
 [build]
-  command = "bundle exec jekyll build"
   publish = "_site"
+  command = "bundle exec jekyll build"
 
 [build.environment]
-  RUBY_VERSION = "3.1"
-  NODE_VERSION = "18"
+  RUBY_VERSION = "2.7.2"
+  NODE_VERSION = "16"
 
 [[plugins]]
   package = "netlify-plugin-ruby"
 
 [context.production]
-  command = "bundle exec jekyll build"
+  command = "bundle install && bundle exec jekyll build"
 
 [context.deploy-preview]
-  command = "bundle exec jekyll build --drafts"
+  command = "bundle install && bundle exec jekyll build --drafts"
 
 [context.branch-deploy]
-  command = "bundle exec jekyll build --drafts"
+  command = "bundle install && bundle exec jekyll build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+[[redirects]]
+  from = "https://www.tomaitagaki.com/*"
+  to = "https://tomaitagaki.com/:splat"
+  status = 301
+  force = true
