@@ -86,8 +86,6 @@ git commit -m "Add new post"
 git push origin main
 ```
 
-Your site updates automatically within 1-2 minutes! 🎉
-
 ## 📁 Project Structure
 
 ```
