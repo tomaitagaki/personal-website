@@ -25,9 +25,13 @@ Thumbs.db
 *.swo
 *~
 
-# Local development
-.env
+# Local development environment
 .env.local
+.ruby-version.local
+Gemfile.local
+
+# Environment files
+.env
 .env.development.local
 .env.test.local
 .env.production.local
