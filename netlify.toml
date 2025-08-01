@@ -22,8 +22,8 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
 
-[[redirects]]
-  from = "https://www.tomaitagaki.com/*"
-  to = "https://tomaitagaki.com/:splat"
-  status = 301
-  force = true
+# [[redirects]]
+#  from = "https://www.tomaitagaki.com/*"
+#  to = "https://tomaitagaki.com/:splat"
+#  status = 301
+#  force = true
