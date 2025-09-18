@@ -6,7 +6,7 @@ description: "My New North Star Goal of Solving Time"
 
 Fresh out of dropping out of my PhD. I asked myself what my motivation should be. 
 
-My mentor, who introduced and inspired me to the world of HCI, would phrase projects as solving ____. When I was trying to pivot directions during my PhD from laser-powered robots to brain-computer interfaces, he phrased it as "solving brain-computer interfaces" as if I would come up with the new "standard" for brain measurements and solve 50 year long paradigms like motion-artifacts and signal integrity. However, upon reflection, this phrasing brings a profound sense of importance to the work we do.
+My mentor, who introduced and inspired me to the world of human-computer interaction (HCI), would phrase projects as solving ____. When I was trying to pivot directions during my PhD from laser-powered robots to brain-computer interfaces, he phrased it as "solving brain-computer interfaces" as if I would come up with the new "standard" for brain measurements and solve 50 year long paradigms like motion-artifacts and signal integrity. However, upon reflection, this phrasing brings a profound sense of importance to the work we do.
 
 *So, for the foreseeable future, my goal is to "solve time."*
 

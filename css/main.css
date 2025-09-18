@@ -119,6 +119,23 @@ main a:hover {
     text-decoration-color: var(--foreground-light);
 }
 
+.overlay figure {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.overlay figure img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.overlay figure figcaption {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.75em;
+}
+
 /* body.type-page {
     background: var(--background-hero);
 } */
