@@ -25,3 +25,8 @@ Recently, in a more practical vain, I've been thinking about how we should be sp
 What would a "foundation model for time" even look like? What would it know? What would it be trained on. And to clarify, I'm not talking about a foundation model for timeseries.
 
 But imagine a model so versed in time it can understand the intricacies of perception but also be objective about time. It could tell us when to experience and when to optimize. More practically, it may look like tools that don't just *manage* your schedule, but truly enhance your *experience* of your time, helping you achieve flow states more readily, mitigate burnout, and leverage your peak cognitive performance. It's about designing our interaction with technology to enrich our most precious resource: time itself.
+
+<figure>
+  <img src="/public/bejan_2020_time_perception_figure.png" alt="Diagram of perceived time across a lifetime from Adrian Bejan" />
+  <figcaption>from Adrian Bejan's Why the Days Seem Shorter as We Get Older, 2019 representation of our perception of time throughout our lifetime. The younger you are the faster your neural firings.</figcaption>
+</figure>
