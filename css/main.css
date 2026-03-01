@@ -225,3 +225,22 @@ nav a.fade {
 .type-home h2 {
     font-size: 1em;
 }
+
+/* Transcript toggle */
+.transcript-toggle {
+    margin: 1em 0;
+    border: 1px solid var(--background-block);
+    border-radius: 4px;
+    padding: 0.75em 1em;
+}
+
+.transcript-toggle summary {
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.transcript-toggle div p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
