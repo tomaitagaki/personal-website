@@ -6,12 +6,15 @@ description: "Writing about productivity, wearables, neurotech, and the intersec
 <div class="overlay">
     <h1>Writing</h1>
     <p>
-        Writing about productivity, wearables, neurotech, and the intersection of all.
+        Writing about productivity, wearables, neurotech, and the intersection
+        of all.
     </p>
 
     {% for post in site.posts %}
-        <p class="article_link">
-            <a href="{{ post.url | relative_url }}">{{ post.date | date: "%Y-%m%d" }}: {{ post.title }}</a>
-        </p>
+    <p class="article_link">
+        <a href="{{ post.url | relative_url }}"
+            >{{ post.date | date: "%Y-%m%d" }}: {{ post.title }}</a
+        >
+    </p>
     {% endfor %}
 </div>
